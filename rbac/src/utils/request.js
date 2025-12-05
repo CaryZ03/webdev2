@@ -12,7 +12,6 @@ export default async (url, options = {}) => {
       headers,
     })
 
-    // 处理401未授权 - Token失效
     if (response.status === 401) {
       localStorage.removeItem('token')
       window.location.href = '/'
